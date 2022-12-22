@@ -78,5 +78,5 @@ const deleteUser = async (req,res) => {
 exports.getAllUsers = getAllUsers;
 exports.getUserById = getUserById;
 exports.deleteUser = deleteUser;
-exports.getUsersByExperience = getUsersByExperience;
+// exports.getUsersByExperience = getUsersByExperience;
 exports.updateUser = updateUser;

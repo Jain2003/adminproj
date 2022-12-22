@@ -1,32 +1,29 @@
 import React from "react";
-import Header from "./components/Header";
+import {Route, Routes} from "react-router-dom"
 import Home from "./components/Home";
-import Cities from "./components/Cities";
-import Experiences from "./components/Experiences";
-import Users from "./components/Experiences";
-import AddCity from "./components/addCity";
-import { Route, Routes } from "react-router-dom";
-/* import Home from "./components/Home";
-import AddBook from "./components/AddBook";
-import Books from "./components/Book/Books";
-import About from "./components/About";
-import BookDetail from "./components/Book/BookDetail"; */
+import AddCity from "./components/AddCity";
+import Cities from "./components/City/Cities.js";
+import CityDetail from "./components/City/CityDetail.js";
+import Bookings from "./components/Booking/Bookings.js";
+import BookingDetail from "./components/Booking/BookingDetail.js";
+import Users from "./components/User/Users.js";
+import UserDetail from "./components/User/UserDetail.js";
+
+
+
 function App() {
   return (
     <React.Fragment>
-      <header>
-        <Header />
-      </header>
       <main>
         <Routes>
           <Route path="/" element={<Home />} exact />
+          {/* <Route path="/addCity" element={<AddCity />} exact /> */}
           <Route path="/cities" element={<Cities />} exact />
-          <Route path="/addCity" element={<AddCity />} exact />
-          <Route path="/experiences" element={<Experiences />} exact />
-          <Route path="/users" element={<Users />} exact />
-          {/*
-          <Route path="/about" element={<About />} exact />
-          <Route path="/books/:id" element={<BookDetail />} exact /> */}
+          {/* <Route path="/cities/:id" element={<CityDetail />} exact /> */}
+          {/* <Route path="/bookings" element={<Bookings />} exact /> */}
+          {/* <Route path="/bookings/:id" element={<BookingDetail />} exact /> */}
+          {/* <Route path="/users" element={<Users />} exact /> */}
+          {/* <Route path="/users/:id" element={<UserDetail />} exact /> */}
         </Routes>
       </main>
     </React.Fragment>

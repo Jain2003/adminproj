@@ -90,21 +90,21 @@ const deleteCity = async(req,res) =>{
 
 
 // this is for search bar.chuck for now.
-const getCityByName = async(req,res)  =>{
-    let city;
-    const citySerached = req.params.cityName;
-    try{
-        city = await City.findOne({displayName : citySerached });
-    }catch(err){
-        console.log(err);
-    }
-    if(!city){
-        return res.status(404).json({message: "no such city found"});
-    }
-    else{
-        return res.status(200).json({city});
-    }
-}
+// const getCityByName = async(req,res)  =>{
+//     let city;
+//     const citySerached = req.params.cityName;
+//     try{
+//         city = await City.findOne({displayName : citySerached });
+//     }catch(err){
+//         console.log(err);
+//     }
+//     if(!city){
+//         return res.status(404).json({message: "no such city found"});
+//     }
+//     else{
+//         return res.status(200).json({city});
+//     }
+// }
 
 exports.getAllCities = getAllCities;
 exports.getCityById = getCityById;

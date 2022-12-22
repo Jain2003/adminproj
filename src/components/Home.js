@@ -1,22 +1,16 @@
 import React from 'react'
-//import {Link} from "react-router-dom" 
 
 const Home = () => {
-  return (
-    <div>
-        <div class="container">
-            <p>welcome home?</p>
-            {/* <nav>
-                <br></br>
-                <Link to="/Cities">Cities</Link>
-                <br></br>
-                <Link to="/Experiences">Experiences</Link>
-                <br></br>
-                <Link to="/Users">Users</Link>
-            </nav> */}
-        </div>
-    </div>
-  )
+        return (
+            <div>
+            <h1>Admin Panel</h1>
+            <ul>
+            <li><a href="/cities">See all cities</a></li>
+            <li><a href="/bookings">See all Bookings</a></li>
+            <li><a href="/users">See all Users</a></li>            
+            </ul>
+            </div>
+        )
 }
 
-export default Home
+export default Home;

@@ -1,8 +1,9 @@
 const express = require("express");
 const mongoose = require("mongoose");
+mongoose.set('strictQuery', true);
 const cors = require("cors");
 const cityRouter = require("./routes/city-routes.js");
-const experienceRouter = require("./routes/experience-routes.js");
+// const experienceRouter = require("./routes/experience-routes.js");
 const userRouter = require("./routes/user-routes.js");
 const bookingsRouter = require("./routes/booking-routes.js")
 const app = express();
@@ -15,7 +16,7 @@ app.use(
 })
 );
 app.use("/cities", cityRouter);
-app.use("/experience", experienceRouter);
+// app.use("/experience", experienceRouter);
 app.use("/users", userRouter);
 app.use("/bookings", bookingsRouter)
 
